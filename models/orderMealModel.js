@@ -9,14 +9,14 @@ const orderSchema=new mongoose.Schema({
         name:{
             type:String
         },
-        postalcode:{
+        postalCode:{
             type:String
         },
         street:{
             type:String
         }
     },
-    orderItems:{
+    orderItems:[{
         amount:{
             type:Number
         },
@@ -29,6 +29,6 @@ const orderSchema=new mongoose.Schema({
         price:{
             type:Number
         }
-    }
+    }]
 })
 module.exports=mongoose.model('mealOrders',orderSchema)
