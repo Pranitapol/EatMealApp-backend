@@ -1,0 +1,57 @@
+GET  http://localhost:5000/meals/getmeal
+
+###
+
+GET  http://localhost:5000/meals/4
+
+###
+
+POST http://localhost:5000/meals/post
+content-type: application/json
+
+{   
+    "mealId":4,
+    "name": "Misal-pav",
+    "description":"A spicy curry and pav  topped with onions and sev",
+    "price":6
+}
+
+###
+
+PATCH http://localhost:5000/meals/3
+content-Type: application/json
+
+{
+    "mealId":3,
+    "name":"Poha",
+    "description":"Authentic and tasty",
+    "price":4
+}
+
+###
+
+DELETE http://localhost:5000/meals/4
+
+###
+
+POST http://localhost:5000/orders/ordermeal 
+Content-Type: application/json
+
+{
+ 
+    "user":{
+        "city":"mumbai",
+        "name":"abc",
+        "postalcode":"12345",
+        "street":"testing.."
+    },
+       "orderItems":{
+        "amount":1,
+        "id":3,
+        "name":"Poha",
+        "price":4
+    }
+}
+
+###
+GET http://localhost:5000/orders/getorder
